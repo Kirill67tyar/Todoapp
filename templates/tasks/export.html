@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Отправка задачи на почту{% endblock %}
+
+{% block main_content %}
+<h2>Отправка задач на почту</h2>
+<p>На вашу почту придет емейл с задачами. Уточните список</p>
+<form action="" method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <p><button class="add" type="submit">Отправить</button></p>
+
+</form>
+{% endblock %}
